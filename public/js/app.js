@@ -52044,7 +52044,8 @@ var app = new Vue({
       var _this = this;
 
       axios.post('save-item', {
-        products: this.products
+        products: this.products,
+        grand_total: this.grand_total
       }).then(function (response) {
         Toast.fire({
           type: 'success',

@@ -8,4 +8,7 @@ class Item extends Model
 {
     
     protected $guarded = [];
+    public function grand_total(){
+        return $this->belongsTo(GrandTotal::class);
+    }
 }

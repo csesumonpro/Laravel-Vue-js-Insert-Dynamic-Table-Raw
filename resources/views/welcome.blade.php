@@ -31,8 +31,6 @@
                                         <th>Total </th>
                                     </tr>
                                 </thead>
-                                
-                               
                                 <tbody>
                                     <tr v-for="(product,index) in products" :key="index">
                                         <td>

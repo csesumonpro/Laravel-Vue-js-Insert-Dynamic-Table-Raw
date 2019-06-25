@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateItemsTable extends Migration
+class CreateGrandTotalsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateItemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('items', function (Blueprint $table) {
+        Schema::create('grand_totals', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('grand_total_id');
-            $table->foreign('grand_total_id')->references('id')->on('grand_totals')->onDelete('cascade');
-            $table->integer('quantity');
-            $table->float('unit_price');
+            $table->float('grand_total');
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ class CreateItemsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('items');
+        Schema::dropIfExists('grand_totals');
     }
 }

@@ -44,7 +44,7 @@ var app = new Vue({
          this.calculateGrandTotal();
         },
         saveItem(){
-            axios.post('save-item',{products:this.products})
+            axios.post('save-item',{products:this.products,grand_total:this.grand_total})
             .then(response=>{
                 Toast.fire({
                     type: 'success',

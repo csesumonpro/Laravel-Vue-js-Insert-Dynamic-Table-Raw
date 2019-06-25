@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300,400,600);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
@@ -11098,5 +11098,65 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  font-size: 1.1em;
+  margin: 1em 0;
+}
+
+.description {
+  margin: 1em auto 2.25em;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-size: 2.5em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul .inner {
+  padding-left: 1em;
+  overflow: hidden;
+  display: none;
+}
+
+ul .inner.show {
+  /*display: block;*/
+}
+
+ul li {
+  margin: 0.5em 0;
+}
+
+ul li a.toggle {
+  width: 100%;
+  display: block;
+  background: rgba(0, 0, 0, 0.78);
+  color: #fefefe;
+  padding: 0.75em;
+  border-radius: 0.15em;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+
+ul li a.toggle:hover {
+  background: rgba(0, 0, 0, 0.9);
 }
 

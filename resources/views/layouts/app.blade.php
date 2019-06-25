@@ -10,11 +10,10 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -76,5 +75,29 @@
             @yield('content')
         </main>
     </div>
+    <script src="//code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script>
+    $(document).ready(function() {
+         $('#example').DataTable();
+    });    
+    </script>
+    <script>
+    $('.toggle').click(function(e) {
+  	e.preventDefault();
+  
+    var $this = $(this);
+  
+    if ($this.next().hasClass('show')) {
+        $this.next().removeClass('show');
+        $this.next().slideUp(350);
+    } else {
+        $this.parent().parent().find('li .inner').removeClass('show');
+        $this.parent().parent().find('li .inner').slideUp(350);
+        $this.next().toggleClass('show');
+        $this.next().slideToggle(350);
+    }
+});
+    </script>
 </body>
 </html>
